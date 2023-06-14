@@ -3,7 +3,7 @@ const Home = () => {
 
     return(
        <div>
-        <h1>I LOVE PROGRAMMING LANGUAGE</h1>
+        <h1 style={{color: 'brown', fontStyle: 'italic'}}>I LOVE PROGRAMMING LANGUAGE</h1>
        </div>
     )
 }
