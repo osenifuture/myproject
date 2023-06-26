@@ -1,43 +1,36 @@
 import "./home.css"
-import { Fragment } from "react";
+import Fruits from "./Fruits";
 
 const Home = () => {
+    return(  
+        <div>
+            <h1>THE MANGO SPECIES</h1>
+            <div className="home-container">
+                {
+                   Fruits.map((fruit) => {
+                    const { name, colour, scientificName, origination, imageUrl} = fruit;
+                    return(
+                        <div key={fruit.id} className="fruit-container">
+                            <h3>{name}</h3>       
+                        <div className="fruit-info">
+                            <p>COLOUR: {colour}</p>
+                            <p>SCIENTIFIC NAME: { scientificName}</p>
+                            <p>ORIGINATION: {origination}</p>
+                            <div className="image-hover">
+                            <img src={imageUrl} alt="" />
+                            </div>
+                            </div>
+                        </div>
+                    )
 
-    return(
-        <Fragment>
-       <div>
-        <h1 style={{color: 'brown', fontStyle: 'italic'}}>I LOVE PROGRAMMING LANGUAGE</h1>
-       </div>
+                   })
+                }
 
-       <div className="pro-container">
-        <h3>Learn Programming Language</h3>
-        <div className="inner-container">
-            <div className="inner-box">
-                <h3>PHYTON</h3>
-            </div>
-            <div className="inner-box">
-                <h3>c#, c, c+, c++ </h3>
-            </div>
-            <div className="inner-box">
-                <h3>MySQL</h3>
-            </div>
-            <div className="inner-box">
-                <h3>Javascript MERN Stack</h3>
-            </div>
-            <div className="inner-box">
-                <h3>Artificial Intelligent</h3>
-            </div>
-            <div className="inner-box">
-                <h3>Cloud Computing</h3>
+
             </div>
         </div>
-       </div>
 
-
-
-
-       </Fragment>
-    )
+    )        
 }
 
 export default Home;

@@ -3,8 +3,13 @@ import Home from "./components/Routes/home";
 import About from "./components/Routes/about";
 import Services from "./components/Routes/services";
 import Faq from "./components/Routes/faq";
+import Pricing from "./components/Routes/Pricing";
 import NotFound from "./components/Routes/notFound";
 import Navigation from "./components/Navbar/Navigation";
+import React from 'react';
+
+
+
 
 
 function App() {
@@ -17,8 +22,11 @@ function App() {
         <Route path="Services" element={<Services/>} />
         <Route path="Faq" element={<Faq/>} />
         <Route path="*" element={<NotFound/>}/>
+        <Route path="Pricing" element={<Pricing/>} />
       </Route>
     </Routes>
+
+  
 
   );
 }

@@ -1,44 +1,27 @@
-import { Fragment } from "react";
+import './services.css'
+import About from './about';
+import MOTOR from './PricingSlave';
 
 const Services = () => {
   return (
-    <Fragment>
+   <div>
       <div className="container">
-        <div className="box">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus ad sed dolore! Dolorum facere odio quas rerum esse
-            quaerat molestias distinctio enim praesentium cum modi nobis
-            explicabo, aperiam eum deserunt eaque labore corporis. Numquam
-            doloribus voluptates, nobis velit facere earum, eaque, culpa debitis
-            rerum ducimus asperiores ipsum eum porro cupiditate!
-          </p>
-        </div>
-
-        <div className="box">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus ad sed dolore! Dolorum facere odio quas rerum esse
-            quaerat molestias distinctio enim praesentium cum modi nobis
-            explicabo, aperiam eum deserunt eaque labore corporis. Numquam
-            doloribus voluptates, nobis velit facere earum, eaque, culpa debitis
-            rerum ducimus asperiores ipsum eum porro cupiditate!
-          </p>
-        </div>
-        
-        <div className="box">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus ad sed dolore! Dolorum facere odio quas rerum esse
-            quaerat molestias distinctio enim praesentium cum modi nobis
-            explicabo, aperiam eum deserunt eaque labore corporis. Numquam
-            doloribus voluptates, nobis velit facere earum, eaque, culpa debitis
-            rerum ducimus asperiores ipsum eum porro cupiditate!
-          </p>
-        </div>
-        
+        {
+          MOTOR.map((motor) => {
+            return (
+              <div key={motor.id} className='box'>
+                <p>{motor.info}</p>
+              </div>
+            )
+          })
+        }
       </div>
-    </Fragment>
+    <About/>
+   </div>
+    
   );
 };
+
+
+
 export default Services;

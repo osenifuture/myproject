@@ -1,10 +1,29 @@
+import Cars from "./Cars";
+import CarCard from "./Car-card";
+
+
+
+
+
 
 const Faq = () => {
 
     return(
         <div>
-            <h1>I LOVE TO BE ASKING QUESTION</h1>
+           
+       
+       {
+        Cars.map((car) => {
+            return(
+                <CarCard key={car.id} car={car} />
+            )
+        })
+       }
+      
+      
         </div>
+    
+    
     )
 }
 
